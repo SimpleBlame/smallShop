@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/SimpleBlame/config-repo
+          username:
+          password:
+          basedir: E:/IdeaProjects/basedir
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8764
