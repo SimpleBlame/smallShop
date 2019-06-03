@@ -7,8 +7,8 @@ spring:
       server:
         git:
           uri: https://github.com/SimpleBlame/config-repo
-          username: SimpleBlame
-          password: ldl8830070
+          username:
+          password:
           basedir: E:/IdeaProjects/basedir
 eureka:
   client:
