@@ -33,6 +33,10 @@ public class ProductServiceImpl implements ProductService {
         return productInfoRepository.findByProductIdIn(productIdList);
     }
 
+    /**
+     * 减库存
+     * @param cartDTOList
+     */
     @Override
     @Transactional
     public void decreaseStock(List<CartDTO> cartDTOList) {
