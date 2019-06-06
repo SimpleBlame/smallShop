@@ -1,5 +1,6 @@
 package com.blame.li.product.service;
 
+import com.blame.li.product.common.DecreaseStockInput;
 import com.blame.li.product.dataobject.ProductInfo;
 import com.blame.li.product.dto.CartDTO;
 
@@ -24,8 +25,8 @@ public interface ProductService {
 
     /**
      * 扣库存
-     * @param cartDTOList
+     * @param decreaseStockInputList
      */
-    void decreaseStock(List<CartDTO> cartDTOList);
+    void decreaseStock(List<DecreaseStockInput> decreaseStockInputList);
 
 }

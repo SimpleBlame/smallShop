@@ -23,6 +23,9 @@ spring:
         output:
           destination: myMessage
           group: order
+  redis:
+    host: localhost
+    port: 6379
 #  cloud:
 #    config:
 #      discovery:

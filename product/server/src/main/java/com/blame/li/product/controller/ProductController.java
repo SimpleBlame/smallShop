@@ -1,5 +1,6 @@
 package com.blame.li.product.controller;
 
+import com.blame.li.product.common.DecreaseStockInput;
 import com.blame.li.product.dataobject.ProductCategory;
 import com.blame.li.product.dataobject.ProductInfo;
 import com.blame.li.product.dto.CartDTO;
@@ -82,11 +83,11 @@ public class ProductController {
 
     /**
      * 减库存
-     * @param cartDTOList
+     * @param decreaseStockInputList
      */
     @PostMapping("/decreaseStock")
-    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList){
-        productService.decreaseStock(cartDTOList);
+    public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList){
+        productService.decreaseStock(decreaseStockInputList);
     }
 
 }
