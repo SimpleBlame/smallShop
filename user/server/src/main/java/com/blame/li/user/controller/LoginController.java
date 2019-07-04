@@ -73,7 +73,7 @@ public class LoginController {
         // 判断是否登陆过
         Cookie cookie = CookieUtil.getCookie(request, CookieConstant.TOKEN);
         if (cookie != null &&
-                !StringUtils.isEmpty(redisTemplate.opsForValue().get(String.format(RedisConstant.TOKEN_TEMPLTE,cookie.getValue())))){
+                !StringUtils.isEmpty(redisTemplate.opsForValue().get(String.format(RedisConstant.TOKEN_TEMPLATE,cookie.getValue())))){
             return ResultVOUtil.success();
         }
 
@@ -89,7 +89,7 @@ public class LoginController {
         //3. redis设置key=uuid,value=xyz
         String token = UUID.randomUUID().toString();
         Integer expire = CookieConstant.expire;
-        redisTemplate.opsForValue().set(String.format(RedisConstant.TOKEN_TEMPLTE,token),
+        redisTemplate.opsForValue().set(String.format(RedisConstant.TOKEN_TEMPLATE,token),
                 openid,
                 expire,
                 TimeUnit.SECONDS);

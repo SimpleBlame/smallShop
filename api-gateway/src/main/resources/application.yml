@@ -19,10 +19,13 @@ zuul:
     myProduct:
       path: /myProduct/**
       serviceId: product
+      sensitiveHeaders:
   #排除某些路由
   ignored-patterns:
     - /product/product/listForOrder
     - /myProduct/product/listForOrder
+  #全部服务忽略敏感头（全部服务都可以传递cookie）
+  sensitive-headers:
 #简洁写法
 #zuul:
 #  routes:

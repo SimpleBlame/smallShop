@@ -1,4 +1,4 @@
-package com.blame.li.user.constant;
+package com.blame.li.apigateway.constant;
 
 /**
  * Create by li
